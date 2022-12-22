@@ -1,14 +1,10 @@
-# Lerna Getting Started Example
+# Lerna and husky Getting Started Example
 
-This repo is a small example of using Lerna 5+.
+This repo is a small example of using Lerna 5+ and husky.
 
 Watch this [10-minute walkthrough](https://youtu.be/1oxFYphTS4Y) to see how new versions of Lerna work.
 
-This repo contains three packages or projects:
-
-- `header` (a library of React components)
-- `footer` (a library of React components)
-- `remixapp` (an app written using the Remix framework which depends on both `header` and `footer`)
+This repo contains two packages or projects:
 
 ```
 packages/
@@ -26,12 +22,10 @@ packages/
         rollup.config.json
         jest.config.js
 
-    remixapp/
-        app/
-            ...
-        public/
-        package.json
-        remix.config.js
-
 package.json
 ```
+Pasos:
+- Raiz del proyecto: npx lerna@latest init
+- En el package.json de la raiz especificar en "workspace" los distintos servicios
+- En lerna.json poner independent en version
+- En raiz "npx husky-init && npm install"
